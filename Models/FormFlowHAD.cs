@@ -4,12 +4,11 @@ using System.Reflection;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.FormFlow;
 using System;
-using System.Collections.Generic;
 
 namespace Microsoft.Bot.Sample.FormBot
 {
-   
- 	[Serializable]
+
+    [Serializable]
     [Template(TemplateUsage.NotUnderstood, "Eu não entendi o termo: \"{0}\", poderia explicar de novo?","Desculpe, eu não entendi \"{0}\". Por favor informe novamente." )]
     public class FormFlowHAD
     {
