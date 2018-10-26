@@ -31,7 +31,7 @@ namespace Microsoft.Bot.Sample.FormBot
                 if (activity.MembersAdded.Any(o => o.Id == activity.Recipient.Id))
                 {
                     var reply = activity.CreateReply();
-                    reply.Text = "Olá, eu sou o **Bot Inteligentão**." ;
+                    reply.Text = "Olá, eu sou o **Dr. Bot**." ;
 
                     await connector.Conversations.ReplyToActivityAsync(reply);
                 }
