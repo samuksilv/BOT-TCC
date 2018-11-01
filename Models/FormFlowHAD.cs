@@ -418,7 +418,7 @@ namespace Microsoft.Bot.Sample.FormBot
             builder.AppendLine();
 
             builder.Append("Ansiedade: ");
-            builder.Append(this.SEXO == SexoEnum.Masculino ? "O " : "A " + "paciente:  " + this.NOME);
+            builder.Append((this.SEXO == SexoEnum.Masculino ? "O " : "A " )+ "paciente  " + this.NOME);
             if (pointsAnsiety <= 7)
                 builder.Append(" não apresenta indícios de ansiedade.");
             else if (pointsAnsiety >= 8 && pointsAnsiety <= 10)
@@ -431,7 +431,7 @@ namespace Microsoft.Bot.Sample.FormBot
             builder.AppendLine();
 
             builder.Append("Depressão: ");
-            builder.Append(this.SEXO == SexoEnum.Masculino ? "O " : "A " + "paciente:  " + this.NOME);
+            builder.Append((this.SEXO == SexoEnum.Masculino ? "O " : "A " )+ "paciente  " + this.NOME);
             if (pointsDepression <= 7)
                 builder.Append(" não apresenta indícios de depressão.");
             else if (pointsDepression >= 8 && pointsDepression <= 10)
