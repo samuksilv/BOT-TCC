@@ -31,10 +31,10 @@ namespace Microsoft.Bot.Sample.FormBot
         [Prompt("Você se sente tensa(o) ou contraída(o)?{||}")]
         public TensaoEnum? TENSAO { get; set; }
 
-        [Prompt("Você sente que gosto das mesmas coisas de antes?{||}")]
+        [Prompt("Você sente que gosta das mesmas coisas que gostava antigamente?{||}")]
         public InterreseEnum? INTERESSE { get; set; }
 
-        [Prompt("Você sento uma espécie de medo, como se alguma coisa ruim fosse acontecer?{||}")]
+        [Prompt("Você sente uma espécie de medo, como se alguma coisa ruim fosse acontecer?{||}")]
         public MedoEnum? MEDO { get; set; }
 
         [Prompt("Dá risadas e se diverte quando vê coisas engraçadas?{||}")]
@@ -231,8 +231,8 @@ namespace Microsoft.Bot.Sample.FormBot
             [Terms("não estou mais me cuidando como deveria")]
             [Describe("não estou mais me cuidando como deveria")]
             option2 = 2,
-            [Terms("talvez não tanto quanto antes")]
-            [Describe("talvez não tanto quanto antes")]
+            [Terms("talvez, não tanto quanto antes")]
+            [Describe("talvez, não tanto quanto antes")]
             option3 = 1,
             [Terms("me cuido do mesmo jeito que antes")]
             [Describe("me cuido do mesmo jeito que antes")]
@@ -338,11 +338,11 @@ namespace Microsoft.Bot.Sample.FormBot
             builder.AppendLine($"Resposta : \"{GetMessageOfResonse(this.TENSAO)}.\" | Pontos: {((int)this.TENSAO).ToString()}");
             builder.AppendLine();
 
-            builder.AppendLine("Você sente que gosto das mesmas coisas de antes ?");
+            builder.AppendLine("Você sente que gosta das mesmas coisas que gostava antigamente ?");
             builder.AppendLine($"Resposta : \"{GetMessageOfResonse(this.INTERESSE)}.\" | Pontos: {((int)this.INTERESSE).ToString()}");
             builder.AppendLine();
 
-            builder.AppendLine("Você sento uma espécie de medo, como se alguma coisa ruim fosse acontecer ?");
+            builder.AppendLine("Você sente uma espécie de medo, como se alguma coisa ruim fosse acontecer ?");
             builder.AppendLine($"Resposta : \"{GetMessageOfResonse(this.MEDO)}.\" | Pontos: {((int)this.MEDO).ToString()}");
             builder.AppendLine();
 
